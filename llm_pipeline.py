@@ -12,7 +12,7 @@ class LLMPipeline:
         self.llm = ChatGroq(
             temperature=0,
             groq_api_key=os.getenv("GROQ_API_KEY"),
-            model_name="llama-3.1-70b-versatile"
+            model_name="llama-3.3-70b-versatile"
         )
 
     def extract_jobs(self, cleaned_text):
@@ -159,14 +159,11 @@ class LLMPipeline:
         except OutputParserException:
             raise OutputParserException("Unable to parse job fit evaluation output.")
         return result
-
+    
     def generate(self, prompt: str) -> str:
-        """
-        A generic method to generate content from any prompt.
-        This can be used by modules that need to generate custom responses.
-        """
-        response = self.llm.invoke({"prompt": prompt})
+        response = self.llm.invoke(prompt)
         return response.content
+
 
 if __name__ == "__main__":
     print(os.getenv("GROQ_API_KEY"))

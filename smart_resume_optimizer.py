@@ -2,6 +2,7 @@ import streamlit as st
 import tempfile
 from unstructured.partition.auto import partition
 from llm_pipeline import LLMPipeline
+from utils import clean_text
 
 def run_smart_resume_optimizer():
     st.header("Smart Resume Optimizer")
@@ -32,7 +33,7 @@ def run_smart_resume_optimizer():
             Provide actionable feedback on how to improve this resume in terms of clarity, tone, and tailoring for specific job descriptions. Suggest specific improvements, rephrasing, and highlight any missing skills.
             ### FEEDBACK (NO PREAMBLE):
             """
-            # Use the generic generate() method instead of direct invocation
+            # Use the updated generate() method (which now passes a string directly)
             response_content = llm.generate(prompt)
             st.markdown("### Resume Optimization Feedback")
             st.write(response_content)
