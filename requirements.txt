@@ -1,0 +1,17 @@
+# Streamlit for the web app interface
+streamlit
+
+# LLM pipeline components (adjust version numbers as appropriate)
+langchain_core
+langchain-groq
+
+# Unstructured package with PDF support for processing CV files (ensure PDF extras are installed)
+unstructured
+unstructured[pdf]
+
+# Environment variable loader
+python-dotenv
+
+# Optional: OCR support for scanned documents (if needed)
+pytesseract
+Pillow
