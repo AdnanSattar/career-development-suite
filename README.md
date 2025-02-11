@@ -58,36 +58,39 @@ A comprehensive AI-powered GenAI application that leverages large language model
    ```bash
    git clone https://github.com/AdnanSattar/career-development-suite.git
    cd career-development-suite
+   ```
 
 ## Install Dependencies:
 
 Ensure you have Python 3.8+ installed. Then, install the required dependencies:
 
 ``` bash
-Copy
 pip install -r requirements.txt
 ```
 ## The requirements.txt includes:
 
 ### Streamlit for the web app interface
-```streamlit
+``` bash
+streamlit
 ```
 ### LLM pipeline components (adjust version numbers as appropriate)
-```
+``` bash
 langchain_core
 langchain-groq
 ```
 
 ### Unstructured package with PDF support for processing CV files (ensure PDF extras are installed)
-```
+``` bash
 unstructured[pdf]
 ```
+
 ### Environment variable loader
-```
+``` bash
 python-dotenv
 ```
+
 ### Optional: OCR support for scanned documents
-```
+``` bash
 pytesseract
 Pillow
 ```
@@ -96,15 +99,14 @@ Pillow
 
 Create a .env file in the project root and add your API keys. For example:
 
-```
+``` bash
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ## Running the Application
 To launch the application, run:
 
-```bash
-Copy
+``` bash
 streamlit run main.py
 ```
 This will start the app and open it in your default web browser. Use the sidebar to navigate between the different tools.
