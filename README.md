@@ -58,51 +58,60 @@ A comprehensive AI-powered GenAI application that leverages large language model
    ```bash
    git clone https://github.com/AdnanSattar/career-development-suite.git
    cd career-development-suite
-Install Dependencies:
+
+## Install Dependencies:
 
 Ensure you have Python 3.8+ installed. Then, install the required dependencies:
 
-bash
+``` bash
 Copy
 pip install -r requirements.txt
-The requirements.txt includes:
+```
+## The requirements.txt includes:
 
-plaintext
-Copy
-# Streamlit for the web app interface
-streamlit
-
-# LLM pipeline components (adjust version numbers as appropriate)
+### Streamlit for the web app interface
+```streamlit
+```
+### LLM pipeline components (adjust version numbers as appropriate)
+```
 langchain_core
 langchain-groq
+```
 
-# Unstructured package with PDF support for processing CV files (ensure PDF extras are installed)
+### Unstructured package with PDF support for processing CV files (ensure PDF extras are installed)
+```
 unstructured[pdf]
-
-# Environment variable loader
+```
+### Environment variable loader
+```
 python-dotenv
-
-# Optional: OCR support for scanned documents
+```
+### Optional: OCR support for scanned documents
+```
 pytesseract
 Pillow
-Configure Environment Variables:
+```
+
+## Configure Environment Variables:
 
 Create a .env file in the project root and add your API keys. For example:
 
-env
-Copy
+```
 GROQ_API_KEY=your_groq_api_key_here
-Running the Application
+```
+
+## Running the Application
 To launch the application, run:
 
-bash
+```bash
 Copy
 streamlit run main.py
+```
 This will start the app and open it in your default web browser. Use the sidebar to navigate between the different tools.
 
 Project Structure
-graphql
-Copy
+
+```
 .
 ├── main.py                          # Main entry point with sidebar navigation
 ├── llm_pipeline.py                  # Module for LLM interactions (LLMPipeline class)
@@ -121,27 +130,33 @@ Copy
 ├── personal_development_tracker.py  # Personal Development Tracker module
 ├── requirements.txt                 # List of project dependencies
 └── README.md                        # This file
-Usage
+```
+
+### Usage
 Navigation:
 Use the sidebar to select one of the available tools. Each tool is designed to help you with a specific aspect of your career development.
 
-Example:
+### Example:
 To generate a cover letter, select "Cover Letter & Interview Prep Generator" from the sidebar, upload your CV, enter the job description, and follow the prompts to generate and refine your cover letter.
 
-Contributing
+## Contributing
 Contributions are welcome! To contribute:
 
-Fork the repository.
+## Fork the repository.
+```
 Create a new branch: git checkout -b feature/your-feature
 Commit your changes: git commit -am 'Add some feature'
 Push to your branch: git push origin feature/your-feature
 Create a new Pull Request.
-License
+```
+
+## License
 This project is licensed under the MIT License.
 
-Contact Author
+# Contact Author
 Adnan Sattar
 adnansattar09@gmail.com
 https://www.linkedin.com/in/adnansattar09/
+
 
 Happy coding and best of luck with your career development journey!
